@@ -1,0 +1,11 @@
+SELECT tools 
+FROM inventory;
+
+SELECT DISTINCT tools 
+FROM inventory;
+
+SELECT DISTINCT genre 
+FROM movies;
+
+SELECT DISTINCT year
+FROM movies;

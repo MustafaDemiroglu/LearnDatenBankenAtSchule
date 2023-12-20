@@ -1,3 +1,0 @@
-select * from celebs;
-
-SELECT name FROM celebs; 

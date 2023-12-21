@@ -1,0 +1,6 @@
+SELECT COUNT(*)
+FROM table_name;
+
+SELECT COUNT(price)
+FROM fake_apps
+WHERE price = 0;

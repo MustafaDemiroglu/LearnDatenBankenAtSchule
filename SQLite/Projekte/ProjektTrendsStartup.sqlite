@@ -1,0 +1,25 @@
+// 1
+SELECT * 
+FROM startups;
+
+// 2
+SELECT COUNT(*)
+FROM startups;
+
+// 3
+SELECT SUM(valuation)
+FROM startups;
+
+// 4
+SELECT MAX(valuation)
+FROM startups;
+
+// 5
+SELECT MAX(raised)
+FROM startups
+WHERE stage = 'Seed';
+
+//6
+SELECT MAX(founded)
+FROM startups;
+

@@ -19,7 +19,54 @@ SELECT MAX(raised)
 FROM startups
 WHERE stage = 'Seed';
 
-//6
+// 6
 SELECT MAX(founded)
 FROM startups;
 
+// 7
+SELECT AVG(valuation)
+FROM startups;
+
+// 8
+SELECT category, AVG(valuation)
+FROM startups
+GROUP BY category;
+
+// 9
+SELECT category, ROUND(AVG(valuation), 2) AS 'Average'
+FROM startups
+GROUP BY category;
+
+// 10
+SELECT category, ROUND(AVG(valuation), 2) AS 'Average'
+FROM startups
+GROUP BY category
+ORDER BY Average DESC;
+
+// 11
+SELECT category, COUNT(name)
+FROM startups
+GROUP BY category;
+
+// 12
+SELECT category, COUNT(name) AS 'company'
+FROM startups
+GROUP BY category
+HAVING COUNT(name) > 3;
+
+// 13
+SELECT location, 
+  ROUND(AVG(valuation),0) AS 'Average Value', 
+  ROUND(AVG(raised), 0) AS 'Average Raise', 
+  ROUND(AVG (employees), 0) AS 'Average Employee'
+FROM startups
+GROUP BY location;
+
+// 14
+SELECT location, 
+  ROUND(AVG(valuation),0) AS 'Average Value', 
+  ROUND(AVG(raised), 0) AS 'Average Raise', 
+  ROUND(AVG (employees), 0) AS 'Average Employee'
+FROM startups
+GROUP BY location
+HAVING ROUND(AVG (employees), 0) > 500;

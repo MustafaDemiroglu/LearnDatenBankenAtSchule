@@ -1,0 +1,21 @@
+SELECT *
+FROM orders
+JOIN customers
+  ON orders.customer_id = customers.customer_id;
+
+SELECT orders.order_id,
+   customers.customer_name
+FROM orders
+JOIN customers
+  ON orders.customer_id = customers.customer_id;
+
+SELECT *
+FROM orders
+JOIN subscriptions
+  ON orders.subscription_id = subscriptions.subscription_id;
+
+SELECT *
+FROM orders
+JOIN subscriptions
+  ON orders.subscription_id = subscriptions.subscription_id
+WHERE description  = 'Fashion Magazine';

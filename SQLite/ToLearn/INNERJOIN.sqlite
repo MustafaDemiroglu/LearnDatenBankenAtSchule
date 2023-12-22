@@ -19,3 +19,19 @@ FROM orders
 JOIN subscriptions
   ON orders.subscription_id = subscriptions.subscription_id
 WHERE description  = 'Fashion Magazine';
+
+SELECT COUNT(*)
+FROM newspaper;
+
+SELECT COUNT(*)
+FROM online;
+
+SELECT COUNT(*)
+FROM newspaper
+JOIN online
+  ON newspaper.id = online.id;
+
+ELECT * 
+FROM classes
+JOIN students
+  ON classes.id = students.class_id;
